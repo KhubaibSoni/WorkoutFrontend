@@ -24,7 +24,6 @@ const Home = () => {
             dispatch({ type: "SET_WORKOUTS", payload: data });
           }
         } catch (err) {
-          console.log(err || "An error occurred while fetching workouts")
           setError(err.message || "An error occurred while fetching workouts");
         }
       }
