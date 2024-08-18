@@ -10,7 +10,7 @@ function Detail({ workout }) {
 const featch =async ()=>{
   try {
       
-    const response = await ApiFunc('Delete',{'Authorization' : `Bearer ${user.token}`},{},"http://localhost:4000/api/workouts/",workout.workout._id)
+    const response = await ApiFunc('Delete',{'Authorization' : `Bearer ${user.token}`},{},"https://backend-two-one.vercel.app/api/workouts",workout.workout._id)
     
     if (response) {
       dispatch({ type: 'DELETE_WORKOUT', payload: response });
