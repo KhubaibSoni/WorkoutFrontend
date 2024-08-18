@@ -13,7 +13,6 @@ const featch =async ()=>{
     const response = await ApiFunc('Delete',{'Authorization' : `Bearer ${user.token}`},{},"http://localhost:4000/api/workouts/",workout.workout._id)
     
     if (response) {
-      console.log("response",response);
       dispatch({ type: 'DELETE_WORKOUT', payload: response });
     }
   } catch (error) {
